@@ -1,0 +1,573 @@
+/* ==============================
+   GLOBAL STYLES
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #080808;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select {
+    font-family: inherit;
+}
+
+/* ==============================
+   BACKGROUND
+============================== */
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 760px;
+
+    background-image: url(
+        "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1920&q=85"
+    );
+
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 760px;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.75),
+        #080808
+    );
+
+    z-index: -1;
+}
+
+.page-content {
+    position: relative;
+}
+
+/* ==============================
+   OFFER STRIP
+============================== */
+
+.offer-strip {
+    padding: 13px 10px;
+
+    background: linear-gradient(
+        90deg,
+        #192a56,
+        #282b65,
+        #8b0000
+    );
+
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* ==============================
+   NAVBAR
+============================== */
+
+.netflix-navbar {
+    min-height: 95px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-title {
+    color: #e50914;
+    font-size: 43px;
+    font-weight: 900;
+    letter-spacing: -2px;
+}
+
+.brand-title:hover {
+    color: #ff3039;
+}
+
+.language-select {
+    background: rgba(0, 0, 0, 0.65);
+    color: white;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 8px 12px;
+    min-width: 115px;
+    cursor: pointer;
+}
+
+.language-select option {
+    background: #171717;
+    color: white;
+}
+
+.signin-btn {
+    background-color: #e50914;
+    border: none;
+    padding: 9px 18px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+.signin-btn:hover {
+    background-color: #b20710;
+}
+
+/* ==============================
+   HERO SECTION
+============================== */
+
+.hero-section {
+    padding-top: 100px;
+    padding-bottom: 110px;
+    min-height: 520px;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 10px 18px;
+    margin-bottom: 24px;
+
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    border-radius: 30px;
+    font-size: 14px;
+    color: #f1f1f1;
+}
+
+.main-title {
+    font-size: clamp(38px, 6vw, 66px);
+    font-weight: 900;
+    line-height: 1.08;
+    letter-spacing: -1.5px;
+    margin-bottom: 25px;
+}
+
+.main-subtitle {
+    font-size: clamp(20px, 3vw, 28px);
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.hero-description {
+    font-size: 17px;
+    color: #e0e0e0;
+    margin-bottom: 25px;
+}
+
+/* ==============================
+   EMAIL FORM
+============================== */
+
+.email-form {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 10px;
+    max-width: 720px;
+    margin: 25px auto 0;
+}
+
+.email-input-wrapper {
+    position: relative;
+    flex: 1;
+    min-width: 0;
+}
+
+.email-input-wrapper label {
+    position: absolute;
+    top: 8px;
+    left: 15px;
+    font-size: 12px;
+    color: #c8c8c8;
+}
+
+.email-input-wrapper input {
+    width: 100%;
+    min-height: 60px;
+    padding: 27px 15px 10px;
+
+    background: rgba(20, 20, 20, 0.85);
+    color: white;
+
+    border: 1px solid #929292;
+    border-radius: 5px;
+    outline: none;
+    font-size: 15px;
+}
+
+.email-input-wrapper input:focus {
+    outline: 2px solid white;
+    outline-offset: 2px;
+    border-color: white;
+}
+
+.email-input-wrapper input::placeholder {
+    color: #aaa;
+    font-size: 13px;
+}
+
+.get-started-btn {
+    min-height: 60px;
+    padding: 0 25px;
+
+    background-color: #e50914;
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    font-size: 19px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.get-started-btn:hover {
+    background-color: #b20710;
+}
+
+.get-started-btn:focus-visible,
+.signin-btn:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 3px;
+}
+
+.form-caption {
+    margin-top: 15px;
+    color: #d0d0d0;
+    font-size: 13px;
+}
+
+.form-message {
+    min-height: 25px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* ==============================
+   TRENDING SECTION
+============================== */
+
+.trending-section {
+    padding-top: 35px;
+    padding-bottom: 70px;
+}
+
+.section-title {
+    font-size: clamp(25px, 4vw, 32px);
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.section-title i {
+    color: #e50914;
+}
+
+.section-description {
+    color: #c9c9c9;
+    margin-bottom: 25px;
+}
+
+.trend-card {
+    height: 210px;
+    padding: 25px 18px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.trend-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.trend-card i {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.trend-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.trend-card p {
+    margin-bottom: 0;
+    color: #e3e3e3;
+    font-size: 14px;
+}
+
+.trend-one {
+    background: linear-gradient(135deg, #4a1118, #151515);
+}
+
+.trend-two {
+    background: linear-gradient(135deg, #172b53, #151515);
+}
+
+.trend-three {
+    background: linear-gradient(135deg, #4a2b13, #151515);
+}
+
+.trend-four {
+    background: linear-gradient(135deg, #44204a, #151515);
+}
+
+/* ==============================
+   FAQ SECTION
+============================== */
+
+.faq-section {
+    padding-top: 30px;
+    padding-bottom: 75px;
+}
+
+.custom-accordion .accordion-item {
+    margin-bottom: 10px;
+    border: none;
+    background-color: #252525;
+}
+
+.custom-accordion .accordion-button {
+    padding: 24px;
+
+    background-color: #252525;
+    color: white;
+
+    font-size: 19px;
+    font-weight: 600;
+
+    box-shadow: none;
+}
+
+.custom-accordion .accordion-button:hover {
+    background-color: #363636;
+}
+
+.custom-accordion .accordion-button:focus {
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.custom-accordion .accordion-button::after {
+    filter: brightness(0) invert(1);
+}
+
+.custom-accordion .accordion-button:not(.collapsed) {
+    background-color: #303030;
+    color: white;
+}
+
+.custom-accordion .accordion-body {
+    padding: 22px 24px;
+
+    background-color: #252525;
+    color: #dedede;
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* ==============================
+   FOOTER
+============================== */
+
+.footer-section {
+    padding-top: 25px;
+    padding-bottom: 35px;
+    color: #bdbdbd;
+}
+
+.footer-question {
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+.footer-links {
+    margin-bottom: 35px;
+}
+
+.footer-links a {
+    display: block;
+    width: fit-content;
+    margin-bottom: 15px;
+
+    color: #bdbdbd;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-language {
+    display: inline-flex;
+    align-items: center;
+
+    border: 1px solid #777;
+    border-radius: 5px;
+
+    padding: 10px 14px;
+    margin-bottom: 25px;
+
+    color: white;
+    font-size: 13px;
+}
+
+.footer-brand {
+    color: #e50914;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.copyright {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #999;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+============================== */
+
+@media (max-width: 768px) {
+
+    .offer-strip {
+        font-size: 12px;
+        padding: 12px 8px;
+    }
+
+    .netflix-navbar {
+        min-height: 80px;
+    }
+
+    .brand-title {
+        font-size: 31px;
+    }
+
+    .language-select {
+        min-width: 95px;
+        padding: 7px;
+        font-size: 13px;
+    }
+
+    .signin-btn {
+        padding: 8px 12px;
+    }
+
+    .hero-section {
+        padding-top: 65px;
+        padding-bottom: 70px;
+    }
+
+    .hero-badge {
+        font-size: 12px;
+    }
+
+    .main-title {
+        letter-spacing: -1px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .email-form {
+        flex-direction: column;
+        max-width: 500px;
+    }
+
+    .email-input-wrapper input {
+        min-height: 58px;
+    }
+
+    .get-started-btn {
+        width: 100%;
+        font-size: 17px;
+    }
+
+    .trend-card {
+        height: 180px;
+        padding: 18px 12px;
+    }
+
+    .trend-card h3 {
+        font-size: 17px;
+    }
+
+    .trend-card p {
+        font-size: 12px;
+    }
+
+    .custom-accordion .accordion-button {
+        padding: 18px;
+        font-size: 16px;
+    }
+
+    .custom-accordion .accordion-body {
+        padding: 18px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .brand-title {
+        font-size: 26px;
+    }
+
+    .language-select {
+        min-width: 85px;
+        font-size: 12px;
+    }
+
+    .signin-btn {
+        padding: 7px 9px;
+        font-size: 12px;
+    }
+
+    .trend-card {
+        height: 160px;
+    }
+}
